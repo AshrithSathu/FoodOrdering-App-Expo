@@ -1,11 +1,22 @@
 import { StyleSheet, Text, View, Image } from "react-native";
 import EditScreenInfo from "@/src/components/EditScreenInfo";
 import Colors from "@/src/constants/Colors";
-const ProductListItem = ({ product }) => {
+import { Product } from "../types";
+
+const defaultimage = require("../../assets/data/images-pizza/default.png");
+
+type ProductListItemProps = {
+  product: Product;
+};
+
+const ProductListItem = ({ product }: ProductListItemProps) => {
   // console.log(props);
   return (
     <View style={styles.container}>
-      <Image source={product.image} style={styles.image}></Image>
+      <Image
+        source={product.image || defaultimage}
+        style={styles.image}
+      ></Image>
       <Text style={styles.title}>{product.name}</Text>
       <Text style={styles.price}>₹{product.price}</Text>
     </View>
