@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     name: "Ultimate Pepperoni",
-    image: require("./images-pizza/peperoni.png"),
+    image: require("@/assets/data/images-pizza/peperoni.png"),
     price: 1299,
   },
   {
